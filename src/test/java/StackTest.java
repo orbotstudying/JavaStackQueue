@@ -1,5 +1,7 @@
 import org.junit.Test;
 
+import java.util.EmptyStackException;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -31,5 +33,16 @@ public class StackTest {
         stack.push("world");
         assertEquals("world", stack.pop());
         assertEquals("Hello", stack.pop());
+    }
+
+    /**
+     * Стек пуст и мы пытаемся из него вытащить значение
+     */
+    @Test(expected = EmptyStackException.class)
+    public void testEmptyStack() {
+        class MyClass {
+        }
+        Stack<MyClass> stack = new Stack<>();
+        stack.pop();
     }
 }
