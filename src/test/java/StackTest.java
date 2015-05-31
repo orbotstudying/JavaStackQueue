@@ -18,6 +18,7 @@ public class StackTest {
         stack.push(1);
         stack.push(2);
         stack.push(3);
+        assertEquals(3, stack.peek().intValue());
         assertEquals(3, stack.pop().intValue());
         assertEquals(2, stack.pop().intValue());
         assertEquals(1, stack.pop().intValue());
@@ -31,6 +32,7 @@ public class StackTest {
         Stack<String> stack = new Stack<>();
         stack.push("Hello");
         stack.push("world");
+        assertEquals("world", stack.peek());
         assertEquals("world", stack.pop());
         assertEquals("Hello", stack.pop());
     }
