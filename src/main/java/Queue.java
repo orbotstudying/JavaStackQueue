@@ -19,7 +19,6 @@ public class Queue<T> {
      */
     public void put(T v) {
         Element newElem = new Element(v);
-        newElem.prev = tail;
         if(isEmpty()) {
             head = newElem;
             tail = newElem;
@@ -62,6 +61,5 @@ public class Queue<T> {
         }
         T value;
         Element next;
-        Element prev;
     }
 }
